@@ -1,0 +1,28 @@
+@define-color background #111721;
+@define-color foreground #f0b7ca;
+@define-color border alpha(@foreground, 0.3);
+@define-color accent #f23888;
+@define-color panel-tint rgba(90, 161, 93, 0.05);
+@define-color panel alpha(@background, 0.9);
+
+window#waybar {
+    background: transparent;
+    color: @foreground;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 6px 8px 0;
+    padding: 2px 6px;
+    background: linear-gradient(to bottom, @panel-tint, @panel);
+    border: 1px solid @border;
+    border-radius: 12px;
+}
+
+#workspaces button.active,
+#workspaces button.focused,
+#custom-launcher,
+#window {
+    color: @accent;
+}

@@ -1,0 +1,29 @@
+/**
+* @name base16 Discord
+* @author @bypass_
+* @version 0.1.0
+* @description Built for Sakura Mochi using Aether and Pywal
+* @source https://github.com/imbypass/base16-Discord
+**/
+
+/* import the parent */
+@import url('https://imbypass.github.io/base16-discord/omarchy-discord.theme.css');
+
+:root {
+    --color00: #111721;
+    --color01: #f23888;
+    --color02: #5aa15d;
+    --color03: #d7be96;
+    --color04: #67dd82;
+    --color05: #f0b7ca;
+    --color06: #6f9485;
+    --color07: #d8c6cc;
+    --color08: #4a5d46;
+    --color09: #ff6aa7;
+    --color10: #86bf86;
+    --color11: #e6d3b4;
+    --color12: #8bf0a1;
+    --color13: #ffd0dc;
+    --color14: #8bb0a4;
+    --color15: #fff1f6;
+}

@@ -1,0 +1,26 @@
+name: Sakura Mochi
+accent: "#f23888"
+cursor: "#f23888"
+background: "#111721"
+foreground: "#f0b7ca"
+details: darker
+
+terminal_colors:
+  normal:
+    black:   "#111721"
+    red:     "#f23888"
+    green:   "#5aa15d"
+    yellow:  "#d7be96"
+    blue:    "#67dd82"
+    magenta: "#f0b7ca"
+    cyan:    "#6f9485"
+    white:   "#d8c6cc"
+  bright:
+    black:   "#4a5d46"
+    red:     "#ff6aa7"
+    green:   "#86bf86"
+    yellow:  "#e6d3b4"
+    blue:    "#8bf0a1"
+    magenta: "#ffd0dc"
+    cyan:    "#8bb0a4"
+    white:   "#fff1f6"
