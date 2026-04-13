@@ -28,27 +28,57 @@ If a surface becomes only pink, the theme loses balance.
 If a surface becomes only green, the theme loses personality.
 The theme works when pink and green are both present, but doing different jobs.
 
+## Source Of Truth
+
+`colors.toml` is the canonical palette source for this theme.
+
+That means:
+
+- every documented color value should match `colors.toml`
+- derived CSS aliases and app-specific mappings should follow `colors.toml`, not invent parallel palette truth
+- if a component needs translucency, gradients, or mixed states, those effects should still be built from the `colors.toml` palette
+- when the palette changes, `colors.toml` should be updated first and the rest of the theme should be reconciled to it
+
 ## Palette Roles
+
+All color choices in this theme should be authored with perceptual color reasoning in mind, using Oklab/Oklch as the design model even though the shipped files store hex values.
+
+That means:
+
+- perceived lightness should stay intentional across accents and support colors
+- saturation changes should preserve role clarity instead of relying on arbitrary HSL-style tweaking
+- pink and green should feel balanced by eye because their lightness and chroma were chosen perceptually, not because their raw hex values happen to look similar in a picker
 
 ### Core Neutrals
 
-- Background: `#111721`
-- Deep structural green-black: `#4a5d46`
-- Light foreground pink: `#f0b7ca`
+- Background: `#111721` (`background`, `color0`)
+- Deep structural green-black: `#4a5d46` (`color8`)
+- Primary foreground pink: `#f0b7ca` (`foreground`, `color5`)
 
 ### Primary Accent System
 
-- Primary focus pink: `#f0b7ca`
-- Hot decorative pink: `#f23888`
-- Soft living green: `#5aa15d`
-- Bright electric green: `#67dd82`
+- Primary focus pink: `#f23888` (`accent`, `active_border_color`, `selection_background`, `color1`)
+- Primary foreground pink: `#f0b7ca` (`foreground`, `color5`)
+- Soft living green: `#5aa15d` (`color2`)
+- Bright electric green: `#67dd82` (`color4`)
+- Secondary cool support green: `#6f9485` (`color6`)
+- Bright support green: `#86bf86` (`color10`)
+- Pale support cyan-green: `#8bb0a4` (`color14`)
+
+### Supporting Light Tones
+
+- Warm cream: `#d7be96` (`color3`)
+- Bright cream: `#e6d3b4` (`color11`)
+- Light shell pink: `#d8c6cc` (`color7`)
+- Bright shell pink: `#ffd0dc` (`color13`)
+- Bright white-pink: `#fff1f6` (`color15`)
 
 ### Semantic Intent
 
 - Pink carries active states, focus, selected surfaces, and visual charm.
 - Green carries support structure, troughs, inactive framing, and atmosphere.
 - Dark plum-black carries depth, contrast, and the mochi-shell body of the interface.
-- Pale cream and cyan stay secondary and should not dominate the shell language.
+- Cream and cyan-green support tones stay secondary and should not dominate the shell language.
 
 ## Surface Language
 
@@ -91,13 +121,25 @@ Rounded corners are part of the identity.
 The theme should prefer:
 
 - medium rounding instead of extreme pill shapes
-- consistent radius across shell surfaces
+- consistent radius relationships across shell surfaces
 - softer silhouettes for windows, panels, OSDs, and popovers
 
-Current target radius:
+Rounding values should be chosen by role, not locked to one universal number.
 
-- shell panels: around `12px`
-- windows and broader glass surfaces: around `14px`
+The system should follow a proportional scale so related surfaces feel mathematically related rather than arbitrarily rounded.
+
+Practical rule:
+
+- use one base radius for the context
+- derive nearby radii as simple multiples or near-multiples of that base such as `1x`, `1.25x`, `1.5x`, or `2x`
+- larger containers should usually have larger radii than the controls they contain
+- nested elements should usually step down in radius rather than matching the outer shell exactly
+- pill shapes are allowed for progress bars, sliders, and chips when the component logic calls for it
+
+Examples of good proportional relationships:
+
+- a major shell can sit around `20-24px` while its internal fields and rows sit around `14-16px`
+- a window shell can sit around `14px` while smaller child controls inherit lower values in the same ratio family
 
 The rounding should feel soft and polished, not bubbly or toy-like.
 
@@ -186,6 +228,7 @@ Do not overuse:
 - same border logic as the rest of the shell
 - same rounded silhouette
 - same pink/green balance
+- green should remain visible as a support cue in at least one structural element such as a tint, icon treatment, trough, hover edge, or internal frame
 - no accidental fallback to flat monochrome boxes
 
 ## What To Preserve

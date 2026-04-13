@@ -1,6 +1,177 @@
+/*  .-^~^-. \/ .-^~^-. \\ `-._.-` // .-^~^-. \/ .-^~^-. */
+/* |                                                   | */
+/* |   ,---.          ,--.                             | */
+/* |  '   .-'  ,--,--.|  |,-.,--.,--.,--.--. ,--,--.   | */
+/* |  `.  `-. ' ,-.  ||     /|  ||  ||  .--'' ,-.  |   | */
+/* |  .-'    |\ '-'  ||  \  \'  ''  '|  |   \ '-'  |   | */
+/* |  `-----'  `--`--'`--'`--'`----' `--'    `--`--'   | */
+/* |                                                   | */
+/* |                 . .         . .                   | */
+/* |               .-^~^-.     .-^~^-.                 | */
+/* |               `-._.-'     `-._.-'                 | */
+/* |                  |           |                    | */
+/* |     ,--.   ,--.             ,--.     ,--.         | */
+/* |     |   `.'   | ,---.  ,---.|  ,---. `--'         | */
+/* |     |  |'.'|  || .-. || .--'|  .-.  |,--.         | */
+/* |     |  |   |  |' '-' '\ `--.|  | |  ||  |         | */
+/* |     `--'   `--' `---'  `---'`--' `--'`--'         | */
+/* |                                                   | */
+/*  .-^~^-. \/ .-^~^-. \\ `-._.-` // .-^~^-. \/ .-^~^-. */
+
 @define-color selected-text #f23888;
 @define-color text #f0b7ca;
 @define-color base #111721;
 @define-color border rgba(242, 56, 136, 0.3);
+@define-color frame rgba(240, 183, 202, 0.12);
+@define-color panel rgba(17, 23, 33, 0.9);
+@define-color panel-edge rgba(90, 161, 93, 0.08);
+@define-color hover rgba(240, 183, 202, 0.06);
+@define-color selected-bg rgba(242, 56, 136, 0.12);
+@define-color muted rgba(240, 183, 202, 0.66);
+@define-color shadow rgba(0, 0, 0, 0.42);
+@define-color glow rgba(242, 56, 136, 0.16);
+@define-color support rgba(90, 161, 93, 0.38);
+@define-color support-soft rgba(90, 161, 93, 0.12);
 @define-color foreground #f0b7ca;
 @define-color background #111721;
+
+window,
+#window {
+    background-color: transparent;
+    color: @text;
+    border: none;
+    outline: none;
+    padding: 0;
+    box-shadow: none;
+    background-image:
+        radial-gradient(circle at center,
+            rgba(0, 0, 0, 0.48) 0%,
+            rgba(0, 0, 0, 0.24) 42%,
+            rgba(0, 0, 0, 0.0) 72%);
+}
+
+.box-wrapper,
+window .box-wrapper,
+#box {
+    min-width: 680px;
+    background-color: @panel;
+    color: @foreground;
+    border: 1px solid @border;
+    border-radius: 22px;
+    padding: 20px 20px 18px;
+    background-image: linear-gradient(to bottom, @panel-edge, transparent 30%);
+    background-clip: padding-box;
+    box-shadow:
+        inset 0 1px rgba(255, 255, 255, 0.035),
+        0 22px 48px @shadow,
+        0 0 0 1px rgba(242, 56, 136, 0.06);
+    font-size: 14px;
+}
+
+.search-container,
+window .search-container,
+window .search,
+.search {
+    background-color: rgba(17, 23, 33, 0.78);
+    border: 1px solid @frame;
+    border-radius: 16px;
+    padding: 14px 16px;
+    margin: 0 0 14px 0;
+    background-image: linear-gradient(to right, @support-soft, transparent 22%);
+    box-shadow:
+        inset 0 1px rgba(255, 255, 255, 0.03),
+        inset 1px 0 0 @support,
+        0 0 0 1px rgba(242, 56, 136, 0.04);
+}
+
+entry,
+#entry entry,
+.input,
+entry.Input {
+    background-color: transparent;
+    color: @foreground;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    outline: none;
+}
+
+list,
+.list,
+scrolledwindow {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+child {
+    padding: 0;
+    margin: 0 0 6px 0;
+    background: transparent;
+    border: none;
+}
+
+child .item-box {
+    padding: 12px 14px;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    background-color: transparent;
+    color: @foreground;
+    transition:
+        background-color 140ms ease,
+        border-color 140ms ease,
+        transform 140ms ease,
+        box-shadow 140ms ease;
+}
+
+child:hover .item-box {
+    background-color: @hover;
+    border-color: alpha(@support, 0.85);
+}
+
+child:selected .item-box {
+    background-color: @selected-bg;
+    border-color: @border;
+    transform: translateX(4px);
+    box-shadow:
+        inset 3px 0 0 @selected-text,
+        0 8px 18px @glow;
+}
+
+child:selected .item-box * {
+    color: @selected-text;
+}
+
+label,
+label.title,
+.label {
+    color: @foreground;
+}
+
+label.description,
+label.dim-label,
+.description {
+    color: @muted;
+}
+
+image {
+    color: #5aa15d;
+}
+
+scrollbar slider {
+    min-width: 8px;
+    min-height: 8px;
+    background-color: alpha(@support, 0.85);
+    border-radius: 999px;
+}
+
+/*   ____  __   __ */
+/*  / __ \/ /__/ / */
+/* / /_/ / / _  /  */
+/* \____/_/\_,_/   */
+/*      __     __        __       */
+/*  __ / /__  / /  ___  / /  ___  */
+/* / // / _ \/ _ \/ _ \/ _ \/ _ \ */
+/* \___/\___/_.__/\___/_.__/\___/ */
+/*                                */
