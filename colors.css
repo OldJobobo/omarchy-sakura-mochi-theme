@@ -19,12 +19,12 @@
 /*  .-^~^-. \/ .-^~^-. \\ `-._.-` // .-^~^-. \/ .-^~^-. */
 
 /*
-   * Aether tokenized template for shared CSS color variables.
+   * Sakura Mochi shared CSS color variables.
    * Primary names: color0-color15 (matches colors.toml)
 */
 
   /* ANSI palette */
-  @define-color color0 #111721;
+  @define-color color0 #0b0d11;
   @define-color color1 #f23888;
   @define-color color2 #5aa15d;
   @define-color color3 #d7be96;
@@ -42,11 +42,11 @@
   @define-color color15 #fff1f6;
 
   /* Optional semantic aliases */
-  @define-color background #111721;
+  @define-color background #0b0d11;
   @define-color foreground #f0b7ca;
   @define-color accent #f23888;
   @define-color selection_bg #f23888;
-  @define-color selection_fg #111721;
+  @define-color selection_fg #0b0d11;
   @define-color cursor #f23888;
 
 /*   ____  __   __ */

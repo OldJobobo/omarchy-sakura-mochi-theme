@@ -5,7 +5,6 @@
 # |  `.  `-. ' ,-.  ||     /|  ||  ||  .--'' ,-.  |   |
 # |  .-'    |\ '-'  ||  \  \'  ''  '|  |   \ '-'  |   |
 # |  `-----'  `--`--'`--'`--'`----' `--'    `--`--'   |
-# |                                                   |
 # |                 . .         . .                   |
 # |               .-^~^-.     .-^~^-.                 |
 # |               `-._.-'     `-._.-'                 |
@@ -19,7 +18,7 @@
 #  .-^~^-. \/ .-^~^-. \\ `-._.-` // .-^~^-. \/ .-^~^-.
 
 # Main background, empty for terminal default, need to be empty if you want transparent background
-theme[main_bg]="#111721"
+theme[main_bg]="#0b0d11"
 
 # Main text color
 theme[main_fg]="#f0b7ca"

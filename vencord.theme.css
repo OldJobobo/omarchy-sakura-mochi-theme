@@ -5,7 +5,6 @@
 /* |  `.  `-. ' ,-.  ||     /|  ||  ||  .--'' ,-.  |   | */
 /* |  .-'    |\ '-'  ||  \  \'  ''  '|  |   \ '-'  |   | */
 /* |  `-----'  `--`--'`--'`--'`----' `--'    `--`--'   | */
-/* |                                                   | */
 /* |                 . .         . .                   | */
 /* |               .-^~^-.     .-^~^-.                 | */
 /* |               `-._.-'     `-._.-'                 | */
@@ -19,41 +18,424 @@
 /*  .-^~^-. \/ .-^~^-. \\ `-._.-` // .-^~^-. \/ .-^~^-. */
 
 /**
-* @name base16 Discord
+* @name Sakura Mochi Discord
 * @author @bypass_
-* @version 0.1.0
-* @description Built for Sakura Mochi using Aether and Pywal
-* @source https://github.com/imbypass/base16-Discord
+* @version 0.4.0
+* @description Standalone Sakura Mochi theme for Vencord/Discord
 **/
 
-/* import the parent */
-@import url('https://imbypass.github.io/base16-discord/omarchy-discord.theme.css');
-
 :root {
-    --color00: #111721;
-    --color01: #f23888;
-    --color02: #5aa15d;
-    --color03: #d7be96;
-    --color04: #67dd82;
-    --color05: #f0b7ca;
-    --color06: #6f9485;
-    --color07: #d8c6cc;
-    --color08: #4a5d46;
-    --color09: #ff6aa7;
-    --color10: #86bf86;
-    --color11: #e6d3b4;
-    --color12: #8bf0a1;
-    --color13: #ffd0dc;
-    --color14: #8bb0a4;
-    --color15: #fff1f6;
+  --color00: #0b0d11;
+  --color01: #f23888;
+  --color02: #5aa15d;
+  --color03: #d7be96;
+  --color04: #67dd82;
+  --color05: #f0b7ca;
+  --color06: #6f9485;
+  --color07: #d8c6cc;
+  --color08: #4a5d46;
+  --color09: #ff6aa7;
+  --color10: #86bf86;
+  --color11: #e6d3b4;
+  --color12: #8bf0a1;
+  --color13: #ffd0dc;
+  --color14: #8bb0a4;
+  --color15: #fff1f6;
+
+  --sm-void: #090d13;
+  --sm-bg: #0b0d11;
+  --sm-panel: #151c26;
+  --sm-panel-hi: #1c2531;
+  --sm-panel-top: #202a37;
+  --sm-text: #f0b7ca;
+  --sm-text-soft: #d8c6cc;
+  --sm-muted: #9e9098;
+  --sm-pink: #f23888;
+  --sm-pink-bright: #ff6aa7;
+  --sm-pink-frost: color-mix(in srgb, var(--color01) 18%, transparent);
+  --sm-pink-line: color-mix(in srgb, var(--color01) 38%, transparent);
+  --sm-green: #5aa15d;
+  --sm-green-bright: #67dd82;
+  --sm-green-frost: color-mix(in srgb, var(--color02) 12%, transparent);
+  --sm-green-line: color-mix(in srgb, var(--color06) 30%, transparent);
+  --sm-cream: #e6d3b4;
+  --sm-shell: color-mix(in srgb, var(--sm-bg) 82%, transparent);
+  --sm-shell-strong: color-mix(in srgb, var(--sm-bg) 92%, black);
+  --sm-stroke: color-mix(in srgb, var(--color15) 7%, transparent);
+  --sm-shadow: rgba(5, 6, 10, 0.5);
+  --sm-shadow-strong: rgba(5, 6, 10, 0.72);
 }
 
-/*   ____  __   __ */
-/*  / __ \/ /__/ / */
-/* / /_/ / / _  /  */
-/* \____/_/\_,_/   */
-/*      __     __        __       */
-/*  __ / /__  / /  ___  / /  ___  */
-/* / // / _ \/ _ \/ _ \/ _ \/ _ \ */
-/* \___/\___/_.__/\___/_.__/\___/ */
-/*                                */
+.theme-dark,
+.theme-darker,
+.theme-midnight,
+.visual-refresh {
+  --background-primary: var(--sm-bg) !important;
+  --background-secondary: #0d1219 !important;
+  --background-secondary-alt: var(--sm-panel) !important;
+  --background-tertiary: var(--sm-void) !important;
+  --background-accent: var(--sm-panel-hi) !important;
+  --background-floating: var(--sm-shell-strong) !important;
+
+  --background-base-lowest: #070a10 !important;
+  --background-base-lower: #0c1118 !important;
+  --background-base-low: var(--sm-bg) !important;
+  --background-base-high: var(--sm-panel-hi) !important;
+  --background-base-higher: var(--sm-panel-top) !important;
+  --background-base-highest: color-mix(in srgb, var(--sm-panel-top) 84%, white) !important;
+
+  --background-surface-high: var(--sm-panel) !important;
+  --background-surface-higher: var(--sm-panel-hi) !important;
+  --background-surface-highest: color-mix(in srgb, var(--sm-panel-top) 88%, white) !important;
+  --bg-surface-raised: var(--sm-panel) !important;
+  --bg-surface-overlay: var(--sm-shell) !important;
+  --bg-base-secondary: #0d1219 !important;
+  --bg-base-tertiary: #090d13 !important;
+  --bg-overlay-2: color-mix(in srgb, var(--sm-panel) 90%, black) !important;
+  --bg-overlay-3: color-mix(in srgb, var(--sm-panel-hi) 92%, black) !important;
+
+  --background-modifier-accent: color-mix(in srgb, var(--color15) 6%, transparent) !important;
+  --background-modifier-hover: color-mix(in srgb, var(--color02) 8%, var(--sm-panel)) !important;
+  --background-modifier-active: linear-gradient(90deg, color-mix(in srgb, var(--color01) 16%, var(--sm-panel)) 0%, color-mix(in srgb, var(--color02) 8%, var(--sm-panel)) 100%) !important;
+  --background-modifier-selected: linear-gradient(90deg, color-mix(in srgb, var(--color01) 24%, var(--sm-panel)) 0%, color-mix(in srgb, var(--color02) 10%, var(--sm-panel)) 100%) !important;
+  --background-mentioned: linear-gradient(90deg, color-mix(in srgb, var(--color01) 16%, var(--sm-bg)) 0%, color-mix(in srgb, var(--color02) 6%, var(--sm-bg)) 100%) !important;
+  --background-mentioned-hover: linear-gradient(90deg, color-mix(in srgb, var(--color01) 24%, var(--sm-bg)) 0%, color-mix(in srgb, var(--color02) 10%, var(--sm-bg)) 100%) !important;
+  --background-message-hover: color-mix(in srgb, white 3%, transparent) !important;
+  --background-nested-floating: color-mix(in srgb, var(--sm-bg) 94%, black) !important;
+
+  --chat-background-default: var(--sm-bg) !important;
+  --channeltextarea-background: color-mix(in srgb, var(--sm-panel) 80%, transparent) !important;
+  --input-background: color-mix(in srgb, var(--sm-panel) 85%, transparent) !important;
+  --modal-footer-background: color-mix(in srgb, var(--sm-void) 88%, transparent) !important;
+  --home-background: var(--sm-void) !important;
+
+  --text-normal: var(--sm-text) !important;
+  --text-muted: var(--sm-muted) !important;
+  --text-primary: var(--color15) !important;
+  --text-secondary: var(--sm-text-soft) !important;
+  --text-link: var(--color12) !important;
+  --text-brand: var(--color13) !important;
+  --header-primary: var(--color15) !important;
+  --header-secondary: var(--sm-text-soft) !important;
+  --channels-default: color-mix(in srgb, var(--color07) 74%, var(--sm-panel-top)) !important;
+  --interactive-normal: color-mix(in srgb, var(--color07) 78%, var(--sm-panel-top)) !important;
+  --interactive-hover: var(--color13) !important;
+  --interactive-active: var(--color15) !important;
+  --interactive-muted: var(--color06) !important;
+
+  --brand-360: var(--sm-pink) !important;
+  --brand-500: var(--sm-pink) !important;
+  --brand-560: var(--sm-pink-bright) !important;
+  --brand-600: color-mix(in srgb, var(--color01) 82%, black) !important;
+  --channel-icon: color-mix(in srgb, var(--color06) 82%, var(--sm-panel-top)) !important;
+  --focus-primary: var(--sm-pink) !important;
+  --input-border-focus: var(--sm-pink) !important;
+
+  --button-filled-brand-background: linear-gradient(135deg, var(--sm-pink) 0%, var(--sm-pink-bright) 100%) !important;
+  --button-filled-brand-background-hover: linear-gradient(135deg, var(--sm-pink-bright) 0%, var(--color13) 100%) !important;
+  --button-filled-brand-text: var(--sm-bg) !important;
+  --button-secondary-background: color-mix(in srgb, var(--sm-panel-hi) 90%, black) !important;
+  --button-secondary-background-hover: color-mix(in srgb, var(--sm-panel-top) 92%, black) !important;
+  --button-secondary-text: var(--color07) !important;
+  --button-positive-background: color-mix(in srgb, var(--color02) 60%, var(--sm-bg)) !important;
+  --button-positive-background-hover: color-mix(in srgb, var(--color04) 66%, var(--sm-bg)) !important;
+  --button-positive-text: var(--sm-bg) !important;
+  --button-danger-background: color-mix(in srgb, var(--color01) 82%, var(--sm-bg)) !important;
+  --button-danger-background-hover: color-mix(in srgb, var(--color09) 84%, var(--sm-bg)) !important;
+  --button-danger-text: var(--sm-bg) !important;
+
+  --border-subtle: var(--sm-green-line) !important;
+  --border-strong: var(--sm-pink-line) !important;
+  --scrollbar-thin-thumb: color-mix(in srgb, var(--color01) 42%, transparent) !important;
+  --scrollbar-thin-track: transparent !important;
+
+  --status-positive: var(--sm-green-bright) !important;
+  --status-warning: var(--sm-cream) !important;
+  --status-danger: var(--sm-pink-bright) !important;
+  --info-positive-text: var(--color12) !important;
+  --info-warning-foreground: var(--color11) !important;
+  --info-danger-foreground: var(--color09) !important;
+}
+
+body,
+#app-mount,
+[class*="appMount"],
+[class*="bg_"] {
+  background:
+    radial-gradient(circle at 18% 10%, color-mix(in srgb, var(--color01) 16%, transparent) 0%, transparent 28%),
+    radial-gradient(circle at 84% 18%, color-mix(in srgb, var(--color13) 12%, transparent) 0%, transparent 24%),
+    radial-gradient(circle at 16% 86%, color-mix(in srgb, var(--color02) 10%, transparent) 0%, transparent 28%),
+    linear-gradient(180deg, #141a24 0%, #090d13 100%) !important;
+}
+
+body {
+  letter-spacing: 0.1px;
+}
+
+[class*="guilds_"] {
+  margin: 12px 0 12px 12px !important;
+  border: 1px solid var(--sm-pink-line) !important;
+  border-radius: 24px !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color01) 10%, transparent) 0%, transparent 40%),
+    linear-gradient(180deg, color-mix(in srgb, var(--sm-panel) 92%, black) 0%, color-mix(in srgb, var(--sm-bg) 96%, black) 100%) !important;
+  box-shadow:
+    inset 0 1px 0 var(--sm-stroke),
+    0 18px 40px var(--sm-shadow) !important;
+}
+
+[class*="guilds_"] [class*="scroller_"] {
+  background: transparent !important;
+}
+
+[class*="sidebar_"],
+[class*="chatContent_"],
+[class*="membersWrap_"],
+[class*="container_"][class*="themedBackground_"],
+[class*="contentRegion_"] {
+  background:
+    linear-gradient(180deg, var(--sm-green-frost) 0%, transparent 46%),
+    linear-gradient(180deg, color-mix(in srgb, var(--sm-panel) 92%, black) 0%, color-mix(in srgb, var(--sm-bg) 96%, black) 100%) !important;
+  border: 1px solid var(--sm-green-line) !important;
+  border-radius: 24px !important;
+  box-shadow:
+    inset 0 1px 0 var(--sm-stroke),
+    0 24px 48px var(--sm-shadow) !important;
+}
+
+[class*="sidebar_"] [class*="sidebarList_"],
+[class*="contentRegionScroller_"],
+[class*="chatContent_"] [class*="container_"][class*="themedBackground_"] {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+[class*="sidebar_"] {
+  margin: 12px !important;
+}
+
+[class*="chatContent_"] {
+  margin: 12px 12px 12px 0 !important;
+}
+
+[class*="membersWrap_"] {
+  margin: 12px 12px 12px 0 !important;
+}
+
+[class*="sidebarResizeHandle_"] {
+  background: transparent !important;
+  border: 0 !important;
+  width: 12px !important;
+}
+
+[class*="panels_"],
+[class*="container__37e49"],
+[class*="container__2637a"] {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color02) 8%, transparent) 0%, transparent 28%),
+    color-mix(in srgb, var(--sm-void) 88%, transparent) !important;
+  border-top: 1px solid color-mix(in srgb, var(--color01) 20%, transparent) !important;
+  border-radius: 0 0 22px 22px !important;
+}
+
+[class*="title_"],
+[class*="subtitleContainer_"],
+[class*="header_"],
+[class*="children_"] > [class*="searchBar_"] {
+  background: transparent !important;
+}
+
+a[data-list-item-id^="channels___"],
+[class*="side_b3f026"] [class*="item_b3f026"] {
+  margin: 4px 0 !important;
+  border-radius: 16px !important;
+  transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease !important;
+}
+
+a[data-list-item-id^="channels___"]:hover,
+[class*="side_b3f026"] [class*="item_b3f026"]:hover {
+  background: color-mix(in srgb, var(--color02) 9%, var(--sm-panel-hi)) !important;
+  transform: translateX(3px) !important;
+}
+
+a[data-list-item-id^="channels___"][aria-selected="true"],
+[class*="modeSelected_"] [class*="link_"] {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color01) 28%, var(--sm-panel-hi)) 0%, color-mix(in srgb, var(--color02) 8%, var(--sm-panel-hi)) 100%) !important;
+  border: 1px solid var(--sm-pink-line) !important;
+  border-radius: 16px !important;
+  box-shadow:
+    inset 3px 0 0 var(--color13),
+    0 10px 22px color-mix(in srgb, var(--color01) 12%, transparent) !important;
+  transform: translateX(4px) !important;
+}
+
+a[data-list-item-id^="channels___"] svg,
+a[data-list-item-id^="channels___"] svg path {
+  color: color-mix(in srgb, var(--color06) 86%, var(--sm-panel-top)) !important;
+  fill: currentColor !important;
+}
+
+[class*="modeUnread"] [class*="icon__"],
+[class*="modeUnread"] [class*="icon__"] path,
+#channels [class*="modeUnread"] [class*="name__"],
+a[data-list-item-id^="channels___"][class*="modeUnread"] [class*="name"],
+a[data-list-item-id^="channels___"][class*="modeUnread"] [class*="name"] * {
+  color: var(--color13) !important;
+  fill: currentColor !important;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+}
+
+[class*="searchBar_"],
+[class*="channelTextArea_"],
+[class*="forumPost_"],
+[class*="cardPrimary_"],
+[class*="prompt_"],
+[class*="uploadDropModal_"] {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color02) 8%, transparent) 0%, transparent 100%),
+    linear-gradient(180deg, color-mix(in srgb, var(--sm-panel-top) 70%, transparent) 0%, color-mix(in srgb, var(--sm-panel) 84%, transparent) 100%) !important;
+  border: 1px solid var(--sm-green-line) !important;
+  border-radius: 18px !important;
+  box-shadow: inset 0 1px 0 var(--sm-stroke) !important;
+}
+
+[class*="channelTextArea_"] {
+  padding: 6px !important;
+}
+
+[class*="searchBar_"] [class*="searchBox_"],
+[class*="channelTextArea_"] [class*="scrollableContainer_"] {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+[class*="channelTextArea_"]:focus-within,
+[class*="searchBar_"]:focus-within {
+  border-color: var(--sm-pink-line) !important;
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--color15) 9%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--color01) 16%, transparent),
+    0 12px 28px color-mix(in srgb, var(--color01) 14%, transparent) !important;
+}
+
+[class*="channelTextArea_"] [class*="scrollableContainer_"] {
+  border-radius: 14px !important;
+  border: 0 !important;
+}
+
+[class*="searchBar_"] [class*="searchBox_"] {
+  border: 0 !important;
+  padding: 0 !important;
+}
+
+[class*="channelTextArea_"]:has([class*="replyBar_"], [class*="attachedBars_"]) [class*="scrollableContainer_"] {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+[class*="replyBar_"],
+[class*="attachedBars_"] {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--color01) 10%, transparent) 0%, transparent 100%), color-mix(in srgb, var(--sm-panel) 90%, black) !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--color01) 18%, transparent) !important;
+}
+
+[class*="menu_"],
+[class*="popout_"],
+[class*="autocomplete_"],
+[class*="messagesPopout_"],
+[class*="container_"][class*="floating_"] {
+  background:
+    linear-gradient(180deg, var(--sm-pink-frost) 0%, var(--sm-green-frost) 100%),
+    color-mix(in srgb, var(--sm-bg) 92%, black) !important;
+  border: 1px solid var(--sm-pink-line) !important;
+  border-radius: 22px !important;
+  box-shadow:
+    inset 0 1px 0 var(--sm-stroke),
+    0 24px 50px var(--sm-shadow-strong) !important;
+  backdrop-filter: blur(18px) saturate(120%);
+}
+
+[class*="interactive_"][aria-selected="true"],
+[class*="item_"][aria-selected="true"],
+[class*="interactive_"][class*="selected_"] {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color01) 22%, var(--sm-panel-hi)) 0%, color-mix(in srgb, var(--color02) 8%, var(--sm-panel-hi)) 100%) !important;
+  border: 1px solid var(--sm-pink-line) !important;
+  border-radius: 16px !important;
+  box-shadow: inset 0 1px 0 var(--sm-stroke) !important;
+}
+
+[id^="chat-messages-"] [class*="messageListItem"] {
+  margin: 4px 8px !important;
+}
+
+[id^="chat-messages-"] [class*="messageListItem"] > [class*="message"] {
+  border-radius: 18px !important;
+  padding: 2px 4px !important;
+}
+
+[id^="chat-messages-"] [class*="messageListItem"]:hover > [class*="message"],
+[id^="chat-messages-"] [class*="messageListItem"]:hover [class*="contents"] {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color02) 7%, var(--sm-panel)) 0%, transparent 100%) !important;
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--color06) 18%, transparent),
+    0 8px 18px rgba(0, 0, 0, 0.18) !important;
+}
+
+div[class*="mentioned"],
+li[class*="mentioned"] {
+  background: var(--background-mentioned) !important;
+  border-left: 3px solid var(--sm-pink) !important;
+  border-radius: 16px !important;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color01) 12%, transparent) !important;
+  overflow: hidden !important;
+}
+
+div[class*="mentioned"]::before,
+li[class*="mentioned"]::before {
+  content: none !important;
+}
+
+div[class*="replying"],
+li[class*="replying"] {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--color03) 16%, var(--sm-bg)) 0%, color-mix(in srgb, var(--color02) 6%, var(--sm-bg)) 100%) !important;
+  border-left: 3px solid var(--color03) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+div[class*="replying"]::before,
+li[class*="replying"]::before {
+  content: none !important;
+}
+
+div[class*="unreadBar"],
+span[class*="unreadBar"],
+div[class*="unreadPill"],
+span[class*="unreadPill"],
+div[class*="numberBadge"],
+span[class*="numberBadge"],
+div[class*="textBadge"],
+span[class*="textBadge"] {
+  background: linear-gradient(135deg, var(--sm-pink) 0%, var(--sm-pink-bright) 100%) !important;
+  color: var(--sm-bg) !important;
+  border: 1px solid color-mix(in srgb, var(--color13) 24%, transparent) !important;
+  box-shadow: 0 0 18px color-mix(in srgb, var(--color01) 18%, transparent) !important;
+}
+
+[class*="separator_"],
+[class*="divider_"],
+[class*="barBackground_"],
+[class*="rail_"],
+[class*="track_"] {
+  background-color: color-mix(in srgb, var(--color02) 14%, transparent) !important;
+}
+
+[class*="username"]:not([style]) {
+  color: var(--color13) !important;
+  text-shadow: 0 0 10px color-mix(in srgb, var(--color01) 18%, transparent) !important;
+}

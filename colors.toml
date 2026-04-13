@@ -5,7 +5,6 @@
 # |  `.  `-. ' ,-.  ||     /|  ||  ||  .--'' ,-.  |   |
 # |  .-'    |\ '-'  ||  \  \'  ''  '|  |   \ '-'  |   |
 # |  `-----'  `--`--'`--'`--'`----' `--'    `--`--'   |
-# |                                                   |
 # |                 . .         . .                   |
 # |               .-^~^-.     .-^~^-.                 |
 # |               `-._.-'     `-._.-'                 |
@@ -28,14 +27,14 @@ cursor = "#f23888"
 
 # Primary colors
 foreground = "#f0b7ca"
-background = "#111721"
+background = "#0b0d11"
 
 # Selection colors
-selection_foreground = "#111721"
+selection_foreground = "#0b0d11"
 selection_background = "#f23888"
 
 # Normal colors (ANSI 0-7)
-color0 = "#111721"
+color0 = "#0b0d11"
 color1 = "#f23888"
 color2 = "#5aa15d"
 color3 = "#d7be96"

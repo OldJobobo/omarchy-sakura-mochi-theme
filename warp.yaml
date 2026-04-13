@@ -5,7 +5,6 @@
 # |  `.  `-. ' ,-.  ||     /|  ||  ||  .--'' ,-.  |   |
 # |  .-'    |\ '-'  ||  \  \'  ''  '|  |   \ '-'  |   |
 # |  `-----'  `--`--'`--'`--'`----' `--'    `--`--'   |
-# |                                                   |
 # |                 . .         . .                   |
 # |               .-^~^-.     .-^~^-.                 |
 # |               `-._.-'     `-._.-'                 |
@@ -21,13 +20,13 @@
 name: Sakura Mochi
 accent: "#f23888"
 cursor: "#f23888"
-background: "#111721"
+background: "#0b0d11"
 foreground: "#f0b7ca"
 details: darker
 
 terminal_colors:
   normal:
-    black:   "#111721"
+    black:   "#0b0d11"
     red:     "#f23888"
     green:   "#5aa15d"
     yellow:  "#d7be96"

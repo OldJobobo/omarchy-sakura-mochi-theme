@@ -18,7 +18,7 @@
 /* |                                                   | */
 /*  .-^~^-. \/ .-^~^-. \\ `-._.-` // .-^~^-. \/ .-^~^-. */
 
-@define-color background #111721;
+@define-color background #0b0d11;
 @define-color foreground #f0b7ca;
 @define-color border alpha(@foreground, 0.3);
 @define-color accent #f23888;

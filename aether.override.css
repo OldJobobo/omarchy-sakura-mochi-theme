@@ -5,7 +5,6 @@
 /* |  `.  `-. ' ,-.  ||     /|  ||  ||  .--'' ,-.  |   | */
 /* |  .-'    |\ '-'  ||  \  \'  ''  '|  |   \ '-'  |   | */
 /* |  `-----'  `--`--'`--'`--'`----' `--'    `--`--'   | */
-/* |                                                   | */
 /* |                 . .         . .                   | */
 /* |               .-^~^-.     .-^~^-.                 | */
 /* |               `-._.-'     `-._.-'                 | */
@@ -26,10 +25,10 @@
  */
 
 /* Dynamic Color Palette */
-@define-color background #111721;
+@define-color background #0b0d11;
 @define-color foreground #f0b7ca;
 
-@define-color black #111721;
+@define-color black #0b0d11;
 @define-color red #f23888;
 @define-color green #5aa15d;
 @define-color yellow #d7be96;
