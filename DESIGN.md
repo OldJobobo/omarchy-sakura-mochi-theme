@@ -51,7 +51,7 @@ That means:
 
 ### Core Neutrals
 
-- Background: `#111721` (`background`, `color0`)
+- Background: `#0b0d11` (`background`, `color0`)
 - Deep structural green-black: `#4a5d46` (`color8`)
 - Primary foreground pink: `#f0b7ca` (`foreground`, `color5`)
 

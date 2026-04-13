@@ -27,7 +27,7 @@
 @define-color panel-edge alpha(@color2, 0.08);
 @define-color hover alpha(@foreground, 0.06);
 @define-color selected-bg alpha(@accent, 0.12);
-@define-color muted alpha(@color8, 0.66);
+@define-color muted alpha(@color2, 0.58);
 @define-color shadow rgba(0, 0, 0, 0.42);
 @define-color glow alpha(@accent, 0.16);
 @define-color support alpha(@color2, 0.38);
@@ -41,11 +41,6 @@ window,
     outline: none;
     padding: 0;
     box-shadow: none;
-    background-image:
-        radial-gradient(circle at center,
-            rgba(0, 0, 0, 0.48) 0%,
-            rgba(0, 0, 0, 0.24) 42%,
-            rgba(0, 0, 0, 0.0) 72%);
 }
 
 .box-wrapper,
@@ -61,7 +56,8 @@ window .box-wrapper,
     background-clip: padding-box;
     box-shadow:
         inset 0 1px rgba(255, 255, 255, 0.035),
-        0 22px 48px @shadow,
+        0 18px 36px rgba(0, 0, 0, 0.56),
+        0 8px 16px rgba(0, 0, 0, 0.34),
         0 0 0 1px alpha(@accent, 0.06);
     font-size: 14px;
 }
