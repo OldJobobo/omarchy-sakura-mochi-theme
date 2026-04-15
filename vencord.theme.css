@@ -19,7 +19,7 @@
 
 /**
 * @name Sakura Mochi Discord
-* @author @bypass_
+* @author @OldJobobo
 * @version 0.4.0
 * @description Standalone Sakura Mochi theme for Vencord/Discord
 **/
@@ -50,6 +50,8 @@
   --sm-text: #f0b7ca;
   --sm-text-soft: #d8c6cc;
   --sm-muted: #9e9098;
+  --sm-text-pink: #ffd0dc;
+  --sm-name-pink: #ff6aa7;
   --sm-pink: #f23888;
   --sm-pink-bright: #ff6aa7;
   --sm-pink-frost: color-mix(in srgb, var(--color01) 18%, transparent);
@@ -103,31 +105,33 @@
   --background-message-hover: color-mix(in srgb, white 3%, transparent) !important;
   --background-nested-floating: color-mix(in srgb, var(--sm-bg) 94%, black) !important;
 
-  --chat-background-default: var(--sm-bg) !important;
+  --chat-background-default: transparent !important;
   --channeltextarea-background: color-mix(in srgb, var(--sm-panel) 80%, transparent) !important;
   --input-background: color-mix(in srgb, var(--sm-panel) 85%, transparent) !important;
   --modal-footer-background: color-mix(in srgb, var(--sm-void) 88%, transparent) !important;
   --home-background: var(--sm-void) !important;
 
-  --text-normal: var(--sm-text) !important;
+  --text-normal: var(--color07) !important;
   --text-muted: var(--sm-muted) !important;
   --text-primary: var(--color15) !important;
   --text-secondary: var(--sm-text-soft) !important;
   --text-link: var(--color12) !important;
-  --text-brand: var(--color13) !important;
+  --text-brand: var(--sm-text-pink) !important;
   --header-primary: var(--color15) !important;
   --header-secondary: var(--sm-text-soft) !important;
-  --channels-default: color-mix(in srgb, var(--color07) 74%, var(--sm-panel-top)) !important;
-  --interactive-normal: color-mix(in srgb, var(--color07) 78%, var(--sm-panel-top)) !important;
-  --interactive-hover: var(--color13) !important;
-  --interactive-active: var(--color15) !important;
-  --interactive-muted: var(--color06) !important;
+  --channels-default: var(--color14) !important;
+  --channels-default-muted: color-mix(in srgb, var(--color14) 58%, transparent) !important;
+  --channels-default-unread: var(--sm-pink-bright) !important;
+  --interactive-normal: var(--sm-text) !important;
+  --interactive-hover: var(--sm-text) !important;
+  --interactive-active: var(--sm-text) !important;
+  --interactive-muted: var(--sm-muted) !important;
 
   --brand-360: var(--sm-pink) !important;
   --brand-500: var(--sm-pink) !important;
   --brand-560: var(--sm-pink-bright) !important;
   --brand-600: color-mix(in srgb, var(--color01) 82%, black) !important;
-  --channel-icon: color-mix(in srgb, var(--color06) 82%, var(--sm-panel-top)) !important;
+  --channel-icon: var(--sm-text) !important;
   --focus-primary: var(--sm-pink) !important;
   --input-border-focus: var(--sm-pink) !important;
 
@@ -173,7 +177,7 @@ body {
 }
 
 [class*="guilds_"] {
-  margin: 12px 0 12px 12px !important;
+  margin: 12px 8px 12px 12px !important;
   border: 1px solid var(--sm-pink-line) !important;
   border-radius: 24px !important;
   background:
@@ -201,6 +205,41 @@ body {
   box-shadow:
     inset 0 1px 0 var(--sm-stroke),
     0 24px 48px var(--sm-shadow) !important;
+}
+
+div[class*="messagesWrapper"],
+div[class*="messagesWrapper"] > div[class*="scroller"] {
+  background: transparent !important;
+}
+
+.theme-dark .chat_f75fb0,
+.theme-darker .chat_f75fb0,
+.theme-midnight .chat_f75fb0,
+.visual-refresh .chat_f75fb0,
+.theme-dark .content_f75fb0,
+.theme-darker .content_f75fb0,
+.theme-midnight .content_f75fb0,
+.visual-refresh .content_f75fb0,
+.theme-dark .content_f75fb0 > div,
+.theme-darker .content_f75fb0 > div,
+.theme-midnight .content_f75fb0 > div,
+.visual-refresh .content_f75fb0 > div,
+.theme-dark .content_f75fb0 > div > div,
+.theme-darker .content_f75fb0 > div > div,
+.theme-midnight .content_f75fb0 > div > div,
+.visual-refresh .content_f75fb0 > div > div,
+.theme-dark .content__99f8c,
+.theme-darker .content__99f8c,
+.theme-midnight .content__99f8c,
+.visual-refresh .content__99f8c,
+.theme-dark [role="grid"],
+.theme-darker [role="grid"],
+.theme-midnight [role="grid"],
+.visual-refresh [role="grid"],
+.chatGradient__36d07,
+.chatGradientBase__36d07,
+.scrollerContent__36d07 {
+  background: transparent !important;
 }
 
 [class*="sidebar_"] [class*="sidebarList_"],
@@ -246,6 +285,18 @@ body {
   background: transparent !important;
 }
 
+.subtitleContainer_f75fb0 > section.title_f75fb0,
+section.title_f75fb0.container__9293f {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color01) 10%, transparent) 0%, color-mix(in srgb, var(--color02) 8%, transparent) 100%),
+    color-mix(in srgb, var(--sm-panel) 90%, black) !important;
+  border: 1px solid color-mix(in srgb, var(--color01) 18%, transparent) !important;
+  border-radius: 16px !important;
+  box-shadow:
+    inset 0 1px 0 var(--sm-stroke),
+    0 10px 24px var(--sm-shadow) !important;
+}
+
 a[data-list-item-id^="channels___"],
 [class*="side_b3f026"] [class*="item_b3f026"] {
   margin: 4px 0 !important;
@@ -259,33 +310,80 @@ a[data-list-item-id^="channels___"]:hover,
   transform: translateX(3px) !important;
 }
 
-a[data-list-item-id^="channels___"][aria-selected="true"],
+a[data-list-item-id^="channels___"][aria-selected="true"] [class*="link_"],
 [class*="modeSelected_"] [class*="link_"] {
   background:
     linear-gradient(90deg, color-mix(in srgb, var(--color01) 28%, var(--sm-panel-hi)) 0%, color-mix(in srgb, var(--color02) 8%, var(--sm-panel-hi)) 100%) !important;
   border: 1px solid var(--sm-pink-line) !important;
-  border-radius: 16px !important;
+  border-radius: 12px !important;
   box-shadow:
-    inset 3px 0 0 var(--color13),
+    inset 3px 0 0 var(--color01),
     0 10px 22px color-mix(in srgb, var(--color01) 12%, transparent) !important;
-  transform: translateX(4px) !important;
+  transform: none !important;
+  margin-right: 4px !important;
+}
+
+a[data-list-item-id^="channels___"][aria-selected="true"] [class*="link_"],
+[class*="modeSelected_"] [class*="link_"] {
+  box-sizing: border-box !important;
 }
 
 a[data-list-item-id^="channels___"] svg,
 a[data-list-item-id^="channels___"] svg path {
-  color: color-mix(in srgb, var(--color06) 86%, var(--sm-panel-top)) !important;
+  color: var(--sm-text) !important;
   fill: currentColor !important;
+}
+
+a[data-list-item-id^="channels___"] svg,
+a[data-list-item-id^="channels___"] svg path,
+a[data-list-item-id^="threads___"] svg,
+a[data-list-item-id^="threads___"] svg path {
+  color: var(--color14) !important;
+  fill: var(--color14) !important;
+}
+
+[class*="modeSelected_"] [class*="name_"],
+[class*="modeSelected_"] [class*="name_"] *,
+[class*="modeSelected_"] [class*="icon_"],
+[class*="modeSelected_"] [class*="icon_"] path,
+[class*="modeConnected_"] [class*="name_"],
+[class*="modeConnected_"] [class*="name_"] * {
+  color: var(--sm-text) !important;
+  fill: currentColor !important;
+}
+
+[class*="modeSelected_"] [class*="name_"] {
+  margin-left: 12px !important;
+}
+
+/* Read channel and thread names */
+a[data-list-item-id^="channels___"]:not([class*="modeUnread"]):not([aria-selected="true"]) [class*="name"] *,
+a[data-list-item-id^="threads___"]:not([class*="modeUnread"]):not([aria-selected="true"]) [class*="name"] *,
+li[class*="containerDefault"]:not([class*="modeUnread"]):not([class*="selected"]):not([class*="modeSelected"]) [class*="name"] *,
+#channels [class*="name__"] {
+  color: var(--color14) !important;
 }
 
 [class*="modeUnread"] [class*="icon__"],
 [class*="modeUnread"] [class*="icon__"] path,
 #channels [class*="modeUnread"] [class*="name__"],
-a[data-list-item-id^="channels___"][class*="modeUnread"] [class*="name"],
-a[data-list-item-id^="channels___"][class*="modeUnread"] [class*="name"] * {
-  color: var(--color13) !important;
+a[data-list-item-id^="channels___"][class*="modeUnread"] [class*="name"] *,
+a[data-list-item-id^="threads___"][class*="modeUnread"] [class*="name"] *,
+li[class*="containerDefault"][class*="modeUnread"] [class*="name"] * {
+  color: var(--sm-pink-bright) !important;
   fill: currentColor !important;
   opacity: 1 !important;
   font-weight: 600 !important;
+}
+
+a[data-list-item-id^="channels___"][class*="modeUnread"] svg,
+a[data-list-item-id^="channels___"][class*="modeUnread"] svg path,
+a[data-list-item-id^="threads___"][class*="modeUnread"] svg,
+a[data-list-item-id^="threads___"][class*="modeUnread"] svg path,
+[class*="modeUnread"] [class*="icon__"],
+[class*="modeUnread"] [class*="icon__"] path {
+  color: var(--sm-pink-bright) !important;
+  fill: var(--sm-pink-bright) !important;
 }
 
 [class*="searchBar_"],
@@ -300,6 +398,14 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] [class*="name"] * {
   border: 1px solid var(--sm-green-line) !important;
   border-radius: 18px !important;
   box-shadow: inset 0 1px 0 var(--sm-stroke) !important;
+}
+
+.card_f369db.mainCard_f369db,
+.container__9a337.card_f369db.mainCard_f369db {
+  box-shadow:
+    inset 0 1px 0 var(--sm-stroke),
+    0 0 0 1px color-mix(in srgb, var(--color15) 6%, transparent),
+    0 14px 28px color-mix(in srgb, var(--sm-bg) 42%, transparent) !important;
 }
 
 [class*="channelTextArea_"] {
@@ -377,6 +483,11 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] [class*="name"] * {
   padding: 2px 4px !important;
 }
 
+:is(.theme-dark, .theme-darker, .theme-midnight, .visual-refresh)
+  :is([class*="messageContent"], [class*="markup"]) {
+  color: var(--color07) !important;
+}
+
 [id^="chat-messages-"] [class*="messageListItem"]:hover > [class*="message"],
 [id^="chat-messages-"] [class*="messageListItem"]:hover [class*="contents"] {
   background:
@@ -392,7 +503,7 @@ li[class*="mentioned"] {
   border-left: 3px solid var(--sm-pink) !important;
   border-radius: 16px !important;
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color01) 12%, transparent) !important;
-  overflow: hidden !important;
+  overflow: visible !important;
 }
 
 div[class*="mentioned"]::before,
@@ -405,7 +516,7 @@ li[class*="replying"] {
   background: linear-gradient(90deg, color-mix(in srgb, var(--color03) 16%, var(--sm-bg)) 0%, color-mix(in srgb, var(--color02) 6%, var(--sm-bg)) 100%) !important;
   border-left: 3px solid var(--color03) !important;
   border-radius: 16px !important;
-  overflow: hidden !important;
+  overflow: visible !important;
 }
 
 div[class*="replying"]::before,
@@ -436,6 +547,5 @@ span[class*="textBadge"] {
 }
 
 [class*="username"]:not([style]) {
-  color: var(--color13) !important;
-  text-shadow: 0 0 10px color-mix(in srgb, var(--color01) 18%, transparent) !important;
+  color: var(--sm-name-pink) !important;
 }

@@ -35,7 +35,7 @@ return {
 				-- fg: Object properties, builtin types, builtin variables, member access, default text
 				fg = "#f0b7ca",
 				-- fg_dark: Inactive elements, statusline, secondary text
-				fg_dark = "#f0b7ca",
+				fg_dark = "#d8c6cc",
 				-- comment: Line highlight, gutter elements, disabled states
 				comment = "#4a5d46",
 
@@ -43,7 +43,7 @@ return {
 				-- red: Errors, diagnostics, tags, deletions, breakpoints
 				red = "#f23888",
 				-- orange: Constants, numbers, current line number, git modifications
-				orange = "#f23888",
+				orange = "#d7be96",
 				-- yellow: Types, classes, constructors, warnings, numbers, booleans
 				yellow = "#d7be96",
 				-- green: Comments, strings, success states, git additions
@@ -53,10 +53,27 @@ return {
 				-- blue: Functions, keywords, directories, links, info diagnostics
 				blue = "#67dd82",
 				-- purple: Storage keywords, special keywords, identifiers, namespaces
-				purple = "#f0b7ca",
+				purple = "#ffd0dc",
 				-- magenta: Function declarations, exception handling, tags
-				magenta = "#f0b7ca",
+				magenta = "#ff6aa7",
 			},
+			on_highlights = function(hl, c)
+				hl["@constant.builtin"] = { fg = c.orange }
+				hl["@keyword.function"] = { fg = c.magenta, bold = true }
+				hl["@module"] = { fg = c.purple }
+				hl["@property"] = { fg = c.fg_dark }
+				hl["@type.builtin"] = { fg = c.blue }
+				hl["@variable.member"] = { fg = c.fg_dark }
+
+				hl["@lsp.type.class"] = { fg = c.yellow }
+				hl["@lsp.type.interface"] = { fg = c.yellow }
+				hl["@lsp.type.namespace"] = { fg = c.purple }
+				hl["@lsp.type.parameter"] = { fg = c.cyan, italic = true }
+				hl["@lsp.type.property"] = { fg = c.fg_dark }
+				hl["@lsp.type.struct"] = { fg = c.yellow }
+				hl["@lsp.type.type"] = { fg = c.yellow }
+				hl["@lsp.type.typeParameter"] = { fg = c.blue }
+			end,
 		},
 		config = function(_, opts)
 			require("aether").setup(opts)
