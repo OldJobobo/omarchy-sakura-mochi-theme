@@ -150,6 +150,46 @@ label.dim-label,
     color: @muted;
 }
 
+.keybind-hints,
+.preview {
+    margin-top: 10px;
+    padding: 10px 12px;
+    border: 1px solid alpha(@border, 0.75);
+    border-radius: 14px;
+    background-image: linear-gradient(to bottom, alpha(@color2, 0.09), alpha(@background, 0.74));
+    box-shadow:
+        inset 0 1px rgba(255, 255, 255, 0.028),
+        inset 1px 0 0 alpha(@color2, 0.18),
+        0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+.global-keybinds,
+.item-keybinds {
+    color: @muted;
+    spacing: 8px;
+}
+
+.global-keybinds label,
+.item-keybinds label {
+    background-image: linear-gradient(to bottom, alpha(@accent, 0.18), alpha(@accent, 0.08));
+    color: @foreground;
+    border: 1px solid alpha(@accent, 0.38);
+    border-radius: 999px;
+    padding: 2px 9px;
+    margin-right: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    box-shadow:
+        inset 0 1px rgba(255, 255, 255, 0.05),
+        0 3px 8px alpha(@accent, 0.12);
+}
+
+.global-keybinds label:last-child,
+.item-keybinds label:last-child {
+    margin-right: 0;
+}
+
 image {
     color: @color2;
 }

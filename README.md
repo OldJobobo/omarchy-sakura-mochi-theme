@@ -4,7 +4,7 @@ Sakura Mochi is a dark glass Omarchy theme built on pink bloom, cool green struc
 
 ## Preview
 
-![Sakura Mochi preview](backgrounds/0-kitsune-tea-house.jpg)
+![Sakura Mochi preview](preview.png)
 
 ## Install
 
@@ -24,17 +24,17 @@ omarchy-theme-install https://github.com/OldJobobo/omarchy-sakura-mochi-theme
 
 <table>
   <tr>
-    <td><img src="backgrounds/0-kitsune-tea-house.jpg" width="220" alt="Kitsune tea house"></td>
-    <td><img src="backgrounds/1-oni-mask-gallery.jpg" width="220" alt="Oni mask gallery"></td>
-    <td><img src="backgrounds/2-neon-goggles-girl.jpg" width="220" alt="Neon goggles girl"></td>
+    <td><img src="backgrounds/0-sakura-mochi.png" width="220" alt="Sakura mochi"></td>
+    <td><img src="backgrounds/1-kitsune-tea-house.jpg" width="220" alt="Kitsune tea house"></td>
+    <td><img src="backgrounds/2-oni-mask-gallery.jpg" width="220" alt="Oni mask gallery"></td>
   </tr>
   <tr>
-    <td><img src="backgrounds/3-vr-nebula-runner.jpg" width="220" alt="VR nebula runner"></td>
-    <td><img src="backgrounds/4-neon-smoke-orb.jpg" width="220" alt="Neon smoke orb"></td>
-    <td><img src="backgrounds/5-retrofuture-signal-grid.jpg" width="220" alt="Retrofuture signal grid"></td>
+    <td><img src="backgrounds/3-signal-gridwave.jpg" width="220" alt="Signal gridwave"></td>
+    <td><img src="backgrounds/4-vr-nebula-runner.jpg" width="220" alt="VR nebula runner"></td>
+    <td><img src="backgrounds/5-neon-smoke-orb.jpg" width="220" alt="Neon smoke orb"></td>
   </tr>
   <tr>
-    <td><img src="backgrounds/6-halftone-matchstrike.jpg" width="220" alt="Halftone matchstrike"></td>
+    <td><img src="backgrounds/6-neon-goggles-girl.jpg" width="220" alt="Neon goggles girl"></td>
     <td><img src="backgrounds/7-pink-cadillac-cat.jpg" width="220" alt="Pink cadillac cat"></td>
     <td><img src="backgrounds/8-soapsuds-foam.jpg" width="220" alt="Soapsuds foam"></td>
   </tr>
