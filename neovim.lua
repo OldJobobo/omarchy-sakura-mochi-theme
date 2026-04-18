@@ -65,6 +65,13 @@ return {
 				hl["@type.builtin"] = { fg = c.blue }
 				hl["@variable.member"] = { fg = c.fg_dark }
 
+				-- Force window separators away from the default near-black fallback.
+				hl.WinSeparator = { fg = c.comment }
+				hl.VertSplit = { fg = c.comment }
+				hl.NeoTreeWinSeparator = { fg = c.comment }
+				hl.NeoTreeVertSplit = { fg = c.comment }
+				hl.NvimTreeVertSplit = { fg = c.comment }
+
 				hl["@lsp.type.class"] = { fg = c.yellow }
 				hl["@lsp.type.interface"] = { fg = c.yellow }
 				hl["@lsp.type.namespace"] = { fg = c.purple }

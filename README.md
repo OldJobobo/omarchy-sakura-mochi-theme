@@ -1,6 +1,6 @@
 # Omarchy Sakura Mochi Theme
 
-Sakura Mochi is a dark glass Omarchy theme built on pink bloom, cool green structure, and a near-black lacquer base. It keeps the shell soft and plush instead of sugary, with sakura-tinted borders, rounded surfaces, and just enough retro-futurist glow to hold its shape against louder wallpapers.
+Sakura Mochi is a dark Omarchy theme with soft pink accents, cool green structure, and a near-black base. Rounded glass surfaces and a subtle glow keep it polished, whether the wallpaper is quiet or loud.
 
 ## Preview
 
@@ -43,8 +43,3 @@ omarchy-theme-install https://github.com/OldJobobo/omarchy-sakura-mochi-theme
 ## Requirements
 
 - `Yaru-magenta` icon theme
-
-## Notes
-
-- `colors.toml` is the palette source of truth for the repo.
-- The shell is intentionally darker and calmer than the wallpaper set; the wallpapers are allowed to be loud, the UI is not.

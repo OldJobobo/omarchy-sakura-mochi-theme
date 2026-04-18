@@ -21,6 +21,9 @@
 # By OldJobobo (https://github.com/OldJobobo)
 # 
 
+[window]
+opacity = 0.42
+
 
 [colors]
 [colors.primary]
