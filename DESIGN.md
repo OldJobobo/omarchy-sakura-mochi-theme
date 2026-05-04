@@ -255,6 +255,16 @@ Avoid changes that push the theme into these directions:
 - pink-only surfaces with no green balance
 - green-only restraint that erases the theme's sweetness
 
+## Release Review Checks
+
+Before calling an Omarchy theme release-ready, review the terminal configs as a set instead of one file at a time.
+
+Required check:
+
+- terminal opacity settings should be unified across all terminal configs that support explicit opacity values
+- for this theme, that means `foot.ini`, `kitty.conf`, `ghostty.conf`, and `alacritty.toml` should agree on the same effective background opacity
+- if one terminal cannot express the same setting in its shipped theme format, that exception should be noted explicitly instead of leaving the mismatch silent
+
 ## One-Sentence Test
 
 If a new surface looks like black glass with pink blossom light and green support underneath, it belongs to Sakura Mochi.
