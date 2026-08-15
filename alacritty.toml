@@ -30,6 +30,30 @@ opacity = 0.42
 background = "#0b0d11"
 foreground = "#f0b7ca"
 
+[colors.cursor]
+text = "#0b0d11"
+cursor = "#f23888"
+
+[colors.vi_mode_cursor]
+text = "#0b0d11"
+cursor = "#f23888"
+
+[colors.search.matches]
+foreground = "#0b0d11"
+background = "#d7be96"
+
+[colors.search.focused_match]
+foreground = "#0b0d11"
+background = "#f23888"
+
+[colors.footer_bar]
+foreground = "#0b0d11"
+background = "#f0b7ca"
+
+[colors.selection]
+text = "#0b0d11"
+background = "#f23888"
+
 [colors.normal]
 black   = "#0b0d11"
 red     = "#f23888"
@@ -38,10 +62,10 @@ yellow  = "#d7be96"
 blue    = "#67dd82"
 magenta = "#f0b7ca"
 cyan    = "#6f9485"
-white   = "#d8c6cc"
+white   = "#f0b7ca"
 
 [colors.bright]
-black   = "#4a5d46"
+black   = "#678270"
 red     = "#ff6aa7"
 green   = "#86bf86"
 yellow  = "#e6d3b4"
@@ -49,10 +73,6 @@ blue    = "#8bf0a1"
 magenta = "#ffd0dc"
 cyan    = "#8bb0a4"
 white   = "#fff1f6"
-
-[colors.cursor]
-text   = "#0b0d11"
-cursor = "#f23888"
 
 #   ______   __       ______                                       
 #  /_____/\ /_/\     /_____/\                                      
@@ -68,6 +88,15 @@ cursor = "#f23888"
 #     \: \  \ \  \:\_\ \ \\::(_)  \ \\:\_\ \ \\::(_)  \ \\:\_\ \ \ 
 #      \_____\/   \_____\/ \_______\/ \_____\/ \_______\/ \_____\/ 
 #
+
+#   ____  __   __
+#  / __ \/ /__/ /
+# / /_/ / / _  / 
+# \____/_/\_,_/  
+#      __     __        __      
+#  __ / /__  / /  ___  / /  ___ 
+# / // / _ \/ _ \/ _ \/ _ \/ _ \
+# \___/\___/_.__/\___/_.__/\___/
 
 #   ____  __   __
 #  / __ \/ /__/ /

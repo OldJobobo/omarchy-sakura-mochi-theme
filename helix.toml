@@ -1,3 +1,22 @@
+#  .-^~^-. \/ .-^~^-. \\ `-._.-` // .-^~^-. \/ .-^~^-.
+# |                                                   |
+# |   ,---.          ,--.                             |
+# |  '   .-'  ,--,--.|  |,-.,--.,--.,--.--. ,--,--.   |
+# |  `.  `-. ' ,-.  ||     /|  ||  ||  .--'' ,-.  |   |
+# |  .-'    |\ '-'  ||  \  \'  ''  '|  |   \ '-'  |   |
+# |  `-----'  `--`--'`--'`--'`----' `--'    `--`--'   |
+# |                 . .         . .                   |
+# |               .-^~^-.     .-^~^-.                 |
+# |               `-._.-'     `-._.-'                 |
+# |                  |           |                    |
+# |     ,--.   ,--.             ,--.     ,--.         |
+# |     |   `.'   | ,---.  ,---.|  ,---. `--'         |
+# |     |  |'.'|  || .-. || .--'|  .-.  |,--.         |
+# |     |  |   |  |' '-' '\ `--.|  | |  ||  |         |
+# |     `--'   `--' `---'  `---'`--' `--'`--'         |
+# |                                                   |
+#  .-^~^-. \/ .-^~^-. \\ `-._.-` // .-^~^-. \/ .-^~^-.
+
 # Syntax
 "keyword" = "color5"
 "keyword.control" = { fg = "color5", modifiers = ["italic"] }
@@ -76,12 +95,12 @@
 "ui.bufferline.active" = { fg = "foreground", bg = "background", underline = { color = "color5", style = "line" } }
 
 "ui.text" = "foreground"
-"ui.text.focus" = { fg = "foreground", bg = "color0", modifiers = ["bold"] }
+"ui.text.focus" = { fg = "foreground", bg = "lighter_background", modifiers = ["bold"] }
 "ui.text.inactive" = { fg = "color8" }
 "ui.text.directory" = { fg = "color4" }
 
 "ui.virtual" = "color8"
-"ui.virtual.ruler" = { bg = "color0" }
+"ui.virtual.ruler" = { bg = "lighter_background" }
 "ui.virtual.indent-guide" = "color8"
 "ui.virtual.inlay-hint" = { fg = "color8" }
 "ui.virtual.jump-label" = { fg = "color1", modifiers = ["bold"] }
@@ -96,9 +115,9 @@
 "ui.cursor.primary.insert" = { fg = "background", bg = "color2" }
 "ui.cursor.primary.select" = { fg = "background", bg = "color5" }
 
-"ui.cursorline.primary" = { bg = "color0" }
+"ui.cursorline.primary" = { bg = "lighter_background" }
 
-"ui.highlight" = { bg = "color0", modifiers = ["bold"] }
+"ui.highlight" = { bg = "lighter_background", modifiers = ["bold"] }
 
 "ui.menu" = { fg = "foreground", bg = "background" }
 "ui.menu.selected" = { fg = "background", bg = "foreground", modifiers = ["bold"] }
@@ -118,7 +137,8 @@ hint = "color6"
 [palette]
 background = "#0b0d11"
 foreground = "#f0b7ca"
-cursor = "#fff1f6"
+lighter_background = "#19171c"
+cursor = "#f23888"
 selection_background = "#f23888"
 selection_foreground = "#0b0d11"
 color0 = "#0b0d11"
@@ -129,4 +149,14 @@ color4 = "#67dd82"
 color5 = "#f0b7ca"
 color6 = "#6f9485"
 color7 = "#f0b7ca"
-color8 = "#4a5d46"
+color8 = "#678270"
+
+#   ____  __   __
+#  / __ \/ /__/ /
+# / /_/ / / _  / 
+# \____/_/\_,_/  
+#      __     __        __      
+#  __ / /__  / /  ___  / /  ___ 
+# / // / _ \/ _ \/ _ \/ _ \/ _ \
+# \___/\___/_.__/\___/_.__/\___/
+#                               

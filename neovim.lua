@@ -37,7 +37,7 @@ return {
 				-- fg_dark: Inactive elements, statusline, secondary text
 				fg_dark = "#d8c6cc",
 				-- comment: Line highlight, gutter elements, disabled states
-				comment = "#4a5d46",
+				comment = "#678270",
 
 				-- Accent colors
 				-- red: Errors, diagnostics, tags, deletions, breakpoints
@@ -106,4 +106,13 @@ return {
 --  __ / /__  / /  ___  / /  ___
 -- / // / _ \/ _ \/ _ \/ _ \/ _ \
 -- \___/\___/_.__/\___/_.__/\___/
---
+
+--   ____  __   __
+--  / __ \/ /__/ /
+-- / /_/ / / _  / 
+-- \____/_/\_,_/  
+--      __     __        __      
+--  __ / /__  / /  ___  / /  ___ 
+-- / // / _ \/ _ \/ _ \/ _ \/ _ \
+-- \___/\___/_.__/\___/_.__/\___/
+--                               

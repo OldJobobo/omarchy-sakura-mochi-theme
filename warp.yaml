@@ -33,9 +33,9 @@ terminal_colors:
     blue:    "#67dd82"
     magenta: "#f0b7ca"
     cyan:    "#6f9485"
-    white:   "#d8c6cc"
+    white:   "#f0b7ca"
   bright:
-    black:   "#4a5d46"
+    black:   "#678270"
     red:     "#ff6aa7"
     green:   "#86bf86"
     yellow:  "#e6d3b4"
@@ -43,6 +43,15 @@ terminal_colors:
     magenta: "#ffd0dc"
     cyan:    "#8bb0a4"
     white:   "#fff1f6"
+
+#   ____  __   __
+#  / __ \/ /__/ /
+# / /_/ / / _  / 
+# \____/_/\_,_/  
+#      __     __        __      
+#  __ / /__  / /  ___  / /  ___ 
+# / // / _ \/ _ \/ _ \/ _ \/ _ \
+# \___/\___/_.__/\___/_.__/\___/
 
 #   ____  __   __
 #  / __ \/ /__/ /

@@ -32,8 +32,8 @@
   --color04: #67dd82;
   --color05: #f0b7ca;
   --color06: #6f9485;
-  --color07: #d8c6cc;
-  --color08: #4a5d46;
+  --color07: #f0b7ca;
+  --color08: #678270;
   --color09: #ff6aa7;
   --color10: #86bf86;
   --color11: #e6d3b4;
@@ -557,3 +557,13 @@ a[data-list-item-id^="threads___"][class*="modeUnread"] svg path,
 [class*="username"]:not([style]) {
   color: var(--sm-name-pink) !important;
 }
+
+/*   ____  __   __ */
+/*  / __ \/ /__/ / */
+/* / /_/ / / _  /  */
+/* \____/_/\_,_/   */
+/*      __     __        __       */
+/*  __ / /__  / /  ___  / /  ___  */
+/* / // / _ \/ _ \/ _ \/ _ \/ _ \ */
+/* \___/\___/_.__/\___/_.__/\___/ */
+/*                                */

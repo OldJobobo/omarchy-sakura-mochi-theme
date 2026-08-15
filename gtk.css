@@ -33,8 +33,8 @@
 @define-color blue #67dd82;
 @define-color magenta #f0b7ca;
 @define-color cyan #6f9485;
-@define-color white #d8c6cc;
-@define-color bright_black #4a5d46;
+@define-color white #f0b7ca;
+@define-color bright_black #678270;
 @define-color bright_red #ff6aa7;
 @define-color bright_green #86bf86;
 @define-color bright_yellow #e6d3b4;
@@ -195,6 +195,15 @@ toast button.circular.flat.image-button:hover {
     color: @background;
     background-color: @red;
 }
+
+/*   ____  __   __ */
+/*  / __ \/ /__/ / */
+/* / /_/ / / _  /  */
+/* \____/_/\_,_/   */
+/*      __     __        __       */
+/*  __ / /__  / /  ___  / /  ___  */
+/* / // / _ \/ _ \/ _ \/ _ \/ _ \ */
+/* \___/\___/_.__/\___/_.__/\___/ */
 
 /*   ____  __   __ */
 /*  / __ \/ /__/ / */

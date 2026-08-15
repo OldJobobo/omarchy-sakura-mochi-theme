@@ -52,8 +52,10 @@ That means:
 ### Core Neutrals
 
 - Background: `#0b0d11` (`background`, `color0`)
-- Deep structural green-black: `#4a5d46` (`color8`)
-- Primary foreground pink: `#f0b7ca` (`foreground`, `color5`)
+- Raised lacquer surface: `#19171c` (`lighter_bg`)
+- Deep structural green-black: `#4a5d46` (`dark_fg`)
+- Readable muted green: `#678270` (`muted`, `color8`)
+- Primary foreground pink: `#f0b7ca` (`foreground`, `color5`, `color7`)
 
 ### Primary Accent System
 
@@ -69,7 +71,7 @@ That means:
 
 - Warm cream: `#d7be96` (`color3`)
 - Bright cream: `#e6d3b4` (`color11`)
-- Light shell pink: `#d8c6cc` (`color7`)
+- Light shell pink: `#d8c6cc` (`soft_fg`, used only for hand-tuned secondary text)
 - Bright shell pink: `#ffd0dc` (`color13`)
 - Bright white-pink: `#fff1f6` (`color15`)
 
